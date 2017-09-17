@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.home.passgen.MainActivity">
+
+
+    <TextView
+        android:id="@+id/tvPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="17dp"
+        android:layout_weight="1"
+        android:text="Пароль"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <CheckBox
+        android:id="@+id/cbNumbers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/cbSimbols"
+        android:layout_alignBottom="@+id/cbSimbols"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_weight="1"
+        android:text="Цифры" />
+
+    <CheckBox
+        android:id="@+id/cbSimbols"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvPassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="61dp"
+        android:layout_weight="1"
+        android:text="Символы" />
+
+    <CheckBox
+        android:id="@+id/cbLetters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/cbSimbols"
+        android:layout_alignBottom="@+id/cbSimbols"
+        android:layout_alignParentStart="true"
+        android:layout_weight="1"
+        android:hint="Буквы"
+        android:text="Буквы" />
+
+    <EditText
+        android:id="@+id/edNumbers"
+        android:layout_width="30sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="0"
+        android:inputType="number"
+        android:gravity="center"
+        android:layout_below="@+id/cbSimbols"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/tvText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Введите кол."
+        android:layout_alignBaseline="@+id/edNumbers"
+        android:layout_alignBottom="@+id/edNumbers"
+        android:layout_toStartOf="@+id/btnBuffer" />
+
+    <Button
+        android:id="@+id/btnGener"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:text="Создать"
+        android:layout_below="@+id/edNumbers"
+        android:layout_toEndOf="@+id/cbLetters" />
+
+    <Button
+        android:id="@+id/btnBuffer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Копировать"
+        android:layout_below="@+id/edNumbers"
+        android:layout_alignEnd="@+id/cbNumbers"
+        android:layout_marginEnd="12dp" />
+
+</RelativeLayout>
